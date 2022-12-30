@@ -1,0 +1,11 @@
+const numero = Number(prompt("Insira um número (inteiro ou quebrado): "));
+const numeroTitulo = document.getElementById('numero-inicial');
+const texto = document.getElementById('texto');
+numeroTitulo.innerHTML = numero
+texto.innerHTML = ' '
+texto.innerHTML += `<p>Seu número ao quadrado é: ${numero**0.5}</p>`;
+texto.innerHTML += `<p>É inteiro? ${Number.isInteger(numero)}</p>`;
+texto.innerHTML += `<p>É NaN? ${Number.isNaN(numero)}</p>`;
+texto.innerHTML += `<p>Arredondano pra cima: ${Math.ceil(numero)}</p>`;
+texto.innerHTML += `<p>Arredondando pra baixo: ${Math.floor(numero)}</p>`;
+texto.innerHTML += `<p>Com duas casas decimais: ${numero.toFixed(2)}</p>`;
